@@ -14,11 +14,11 @@ class RecUserAdapter : RecyclerView.Adapter<RecUserAdapter.MyHolder>() {
 
     class MyHolder(view: View) : RecyclerView.ViewHolder(view)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecUserAdapter.MyHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):MyHolder {
         return MyHolder(LayoutInflater.from(parent.context).inflate(R.layout.rec_item_users,parent,false))
     }
 
-    override fun onBindViewHolder(holder: RecUserAdapter.MyHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyHolder, position: Int) {
         val item = items[position]
         holder.itemView.textView.text = item.title
     }

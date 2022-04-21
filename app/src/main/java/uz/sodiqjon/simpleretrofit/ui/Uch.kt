@@ -39,7 +39,6 @@ class Uch : Fragment() {
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             setHasFixedSize(true)
             adapter = restaurantAdapter
-
         }
         viewModel.restaurants.observe(viewLifecycleOwner) { result ->
            result.data?.let { it -> restaurantAdapter.submitList(it) }

@@ -13,7 +13,7 @@ interface RestaurantDao {
     fun getAllRestaurans(): kotlinx.coroutines.flow.Flow<List<RestaurantsData>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertRestaurants(restaurants:List<RestaurantsData>)
+    suspend fun insertRestaurants(restaurants: List<RestaurantsData>)
 
     @Query("DELETE FROM restaurant")
     suspend fun deleteAllRestaurants()
